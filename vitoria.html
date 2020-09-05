@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/estilo.css">
+    <title>Você Venceu</title>
+</head>
+
+<body>
+
+    <div class="over">
+        <img  src="imagens/vitoria.png" alt="game-over">
+    </div>
+    <p class="parabens">PARABÉNS !!!!!</p>
+    <div class="button-over">
+        <input type="button" class="reiniciar" value="Reiniciar" onclick="window.location.href = 'index.html'">
+    </div>
+    <audio class="vitoria" src="musicas/vitoria.mp3"></audio>
+
+
+    <script>
+        let parabens = document.querySelector(".parabens");
+        
+        document.querySelector(".vitoria").play();
+        setInterval( function(){
+            if(parabens.style.visibility === "hidden"){
+                parabens.style.visibility = "visible";
+            }else{
+                parabens.style.visibility = "hidden";
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/estilo.css">
+    <title>Mata Mosquitos</title>
+</head>
+
+<body>
+
+    <div class="over">
+        <img  src="imagens/game.png" alt="game-over">
+    </div>
+    <div class="dificuldade">
+        <select class="form-control">
+            <option value="facil">Fácil</option>
+            <option value="normal">Normal</option>
+            <option value="medio">Médio</option>
+            <option value="dificil">Dificil</option>
+        </select>
+    </div>
+    <div class="button-over">
+        <input type="button" class="iniciar" value="Iniciar Jogo" >
+    </div>
+    <audio src="musicas/inicio.mp3"></audio>
+    <script>
+        document.querySelector("audio").play();
+        
+        document.querySelector(".iniciar").addEventListener("click",function(){
+            let selecao = document.querySelector(".form-control").value;
+            location.href = 'app.html?' + selecao;
+        });
+    </script>
+</body>
+
+</html>
